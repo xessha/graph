@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Ввод графа</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Ввод графа</h1>
+  <form action="/" method="post">
+    <textarea name="matrix" id="matrix" rows="5" cols="50" placeholder="Введите матрицу смежности"></textarea><br>
+    <button type="submit">Отправить</button>
+  </form>
+  <script>
+    // Очистка поля с матрицей при возврате на страницу
+    window.onload = function() {
+      document.getElementById('matrix').value = '';
+    }
+  </script>
+</body>
+</html>

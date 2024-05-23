@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Визуализация графа</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Визуализация графа</h1>
+  <img src="data:image/png;base64,{{ image_base64 }}" alt="Граф"><br>
+  <form action="/visualize" method="post">
+    <label for="start">Начальная вершина:</label>
+    <input type="number" id="start" name="start" required><br>
+    <label for="end">Конечная вершина:</label>
+    <input type="number" id="end" name="end" required><br>
+    <label for="algorithm">Алгоритм:</label>
+    <select id="algorithm" name="algorithm">
+      <option value="dijkstra">Дейкстра</option>
+      <option value="prim">Прим</option>
+      <option value="kruskal">Крускал</option>
+    </select><br>
+    <button type="submit">Найти кратчайший путь</button>
+    <a href="/" class="back-button">Назад</a>
+  </form>
+  {% if path %}
+    <h2>Кратчайший путь {{ path_weight }}: {{ path }}</h2>
+  {% endif %}
+</body>
+</html>

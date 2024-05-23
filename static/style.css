@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .back-button:hover {
+    background-color: #ddd;
+  }
+  
